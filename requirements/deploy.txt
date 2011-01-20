@@ -1,0 +1,4 @@
+--requirement=project.txt
+
+gunicorn
+psycopg2

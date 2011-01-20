@@ -1,0 +1,14 @@
+{% load ifsetting_tag %}
+{% if user.is_authenticated %}
+    <li><a href="{{ request.user.get_absolute_url }}">Account</a></li>
+    {% if user.is_staff %}
+    <li><a href="{% url admin:index %}">Admin</a></li>
+    {% endif %}
+    <li><a href="{% if request.openid %}/openid/logout/?next=/account/logout/{% else %}/account/logout/{% endif %}">Logout</a></li>
+{% else %}
+    {% ifsetting ACCOUNT_OPEN_SIGNUP %}
+        <li><a href="/account/login/" rel="facebox">Log in or Sign Up</a></li>
+    {% else %}
+        <li><a href="/account/login/" rel="facebox">Log in</a></li>
+    {% endifsetting %}
+{% endif %}
