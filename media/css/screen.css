@@ -1,0 +1,80 @@
+img {
+	border: none;
+}
+
+.blue {
+	color: #4461AC;
+}
+
+body {
+	width: 99%;
+	background-color: #FFF;
+}
+
+	#wrapper {
+		width: 875px;
+		position: relative;
+		margin: 0px auto;
+	}
+		
+		#header {
+			height: 140px;
+		}
+		
+			#logo {
+				margin: 0px auto;
+				height: 66px;
+				width: 345px;
+				background: transparent url(../images/logo.png) top left no-repeat;
+			}
+		
+			#nav {
+				margin-top: 10px;
+				height: 57px;
+				background: transparent url(../images/bg_nav.png) top left no-repeat;
+				position: relative;
+			}
+		
+				#nav ul {
+					position: absolute;
+					top: 5px;
+					left: 225px;
+				}
+			
+					#nav ul li{
+						display: inline;
+					}
+				
+						#nav ul li a {
+							text-decoration: none;
+						}
+						
+		#content {
+			width: 875px;
+			height: 525px;
+			position: relative;
+			margin-top: 20px;
+		}
+		
+		.home #content {
+			background: transparent url(../images/bg_home.png) top center no-repeat;
+		}
+		
+			#leftHomePicture {
+				position: absolute;
+				top: 63px;
+				left: 102px;
+			}
+			
+			#rsvpButton {
+				position: absolute;
+				top: 256px;
+				left: 460px;
+			}
+			
+			#rightHomePicture {
+				position: absolute;
+				top: 75px;
+				right: 82px;
+				z-index: 2;
+			}

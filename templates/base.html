@@ -29,53 +29,26 @@
     
 
 <body class="{% block body_class %}{% endblock %}">
-
-    {% block body_outer %}
-
-     <div id="header">
-       	{% block pagehead %}
-       		<h1 class="headerLogo"><a href="/">Base Site</a></h1>
-		{% endblock %}
-    </div>
-    
-	<div id="container" class="clearfix">
-
-        <div id="sideNav">
-  			{% block nav %}{% endblock %}
-		</div>
-        <div id="subpageContent">
-        	{% if site_wide_announcements %}
-                <div id="site_wide_announcements">
-                    <ul>
-                        {% for announcement in site_wide_announcements %}
-                        <li>
-                            <a href="{{ announcement.get_absolute_url }}">{{ announcement }}</a> -
-                            <a href="{% url announcement_hide announcement.pk %}?next={{ request.path }}">{% trans "Hide announcement" %}</a>
-                        </li>
-                        {% endfor %}
-                    </ul>
-                </div>
-            {% endif %}
-            {% if messages %}
-                <ul id="messages">
-                    {% for message in messages %}
-                    <li id="message_{{ forloop.counter }}"{% if message.tags %} class="{{ message.tags }}"{% endif %}>
-                        <a href="#"><small>{% trans "clear" %}</small></a>
-                        {{ message }}
-                    </li>
-                    {% endfor %}
-                </ul>
-            {% endif %}
-    
-            {% block body %}
-            {% endblock %}
-      	</div><!-- end content div-->
-        <div id="footer">
-        	{% block footer %}{% endblock %}
-        </div>
-	</div><!-- end container -->
-	
-	{% endblock %}
+	<div id="wrapper">
+		<div id="header">
+			<div id="logo"></div> <!-- #logo -->
+			<div id="nav">
+				<ul>
+					<li><a href="#"><img src="img/nav_rsvp.png" alt="rsvp" /></a></li>
+					<li><a href="#"><img src="img/nav_info.png" alt="wedding day information" /></a></li>
+					<li><a href="#"><img src="img/nav_ourStory.png" alt="our story" /></a></li>
+					<li><a href="#"><img src="img/nav_registry.png" alt="registry" /></a></li>
+				</ul>
+			</div> <!-- #nav -->
+		</div> <!-- #header -->
+		<div id="content">
+			{% block body_outer %}
+				<img id="leftHomePicture" src="img/img_homeLeft.png" />
+				<a href=""><img id="rsvpButton" src="img/btn_rsvp.png" /></a>
+				<img id="rightHomePicture" src="img/img_homeRight.png" />
+			{% endblock %}
+		</div> <!-- #content -->
+	</div> <!-- #wrapper -->	
             
     <!-- all scripts -->
     <script src="{{ STATIC_URL }}pinax/js/base.js" type="text/javascript"></script>
