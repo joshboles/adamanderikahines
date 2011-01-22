@@ -30,7 +30,7 @@ MANAGERS = ADMINS
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": "base",
+        "NAME": "adamanderikahines",
         "USER": "",
         "PASSWORD": "",
         "HOST": "",
@@ -83,7 +83,7 @@ MIDDLEWARE_CLASSES = [
     "debug_toolbar.middleware.DebugToolbarMiddleware",
 ]
 
-ROOT_URLCONF = "base.urls"
+ROOT_URLCONF = "adamanderikahines.urls"
 
 TEMPLATE_DIRS = [
     os.path.join(PROJECT_ROOT, "templates"),
@@ -215,9 +215,9 @@ DEBUG_TOOLBAR_CONFIG = {
 SRV_WYSIWYG_EDITOR = "tinymce"
 
 # Django Admin Tools
-ADMIN_TOOLS_MENU = "basic.menu.CustomMenu"
+ADMIN_TOOLS_MENU = "adamanderikahines.menu.CustomMenu"
 ADMIN_TOOLS_THEMING_CSS = "css/admin_tools.css"
-ADMIN_TOOLS_INDEX_DASHBOARD = "basic.dashboard.CustomIndexDashboard"
+ADMIN_TOOLS_INDEX_DASHBOARD = "adamanderikahines.dashboard.CustomIndexDashboard"
 
 
 try:

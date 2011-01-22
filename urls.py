@@ -12,7 +12,7 @@ handler500 = "pinax.views.server_error"
 
 
 urlpatterns = patterns("",
-
+    url(r"^$", direct_to_template, {"template": "homepage.html"}, name="homepage"),
     # base urls
     url(r"^profiles/", include("profiles.urls")),
     url(r"^blog/", include("biblion.urls")),
