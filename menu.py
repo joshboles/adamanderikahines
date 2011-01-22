@@ -17,14 +17,6 @@ class CustomMenu(Menu):
             title=_("Dashboard"),
             url=reverse("admin:index")
         ))
-        self.children.append(items.MenuItem(
-            title=_("Back To Site"),
-            url=reverse("reg_home")
-        ))
-        self.children.append(items.MenuItem(
-            title=_("Inbox"),
-            url=reverse("msgs_inbox")
-        ))
         self.children.append(BookmarkMenuItem(
             title=_("Bookmarks")
         ))
