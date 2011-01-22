@@ -1,6 +1,6 @@
 #!/bin/sh
-source /home/serveruser/.virtualenvs/base/bin/activate
-cd /home/serveruser/development-sites/base/
+source /home/serveruser/.virtualenvs/adamanderikahines/bin/activate
+cd /home/serveruser/development-sites/adamanderikahines/
 python manage.py build_static --noinput
 supervisorctl stop base
 deactivate

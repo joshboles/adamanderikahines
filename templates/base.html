@@ -34,18 +34,18 @@
 			<div id="logo"></div> <!-- #logo -->
 			<div id="nav">
 				<ul>
-					<li><a href="#"><img src="img/nav_rsvp.png" alt="rsvp" /></a></li>
-					<li><a href="#"><img src="img/nav_info.png" alt="wedding day information" /></a></li>
-					<li><a href="#"><img src="img/nav_ourStory.png" alt="our story" /></a></li>
-					<li><a href="#"><img src="img/nav_registry.png" alt="registry" /></a></li>
+					<li><a href="#"><img src="{{ STATIC_URL }}images/nav_rsvp.png" alt="rsvp" /></a></li>
+					<li><a href="#"><img src="{{ STATIC_URL }}images/nav_info.png" alt="wedding day information" /></a></li>
+					<li><a href="#"><img src="{{ STATIC_URL }}images/nav_ourStory.png" alt="our story" /></a></li>
+					<li><a href="#"><img src="{{ STATIC_URL }}images/nav_registry.png" alt="registry" /></a></li>
 				</ul>
 			</div> <!-- #nav -->
 		</div> <!-- #header -->
 		<div id="content">
 			{% block body_outer %}
-				<img id="leftHomePicture" src="img/img_homeLeft.png" />
-				<a href=""><img id="rsvpButton" src="img/btn_rsvp.png" /></a>
-				<img id="rightHomePicture" src="img/img_homeRight.png" />
+				<img id="leftHomePicture" src="{{ STATIC_URL }}images/img_homeLeft.png" />
+				<a href=""><img id="rsvpButton" src="{{ STATIC_URL }}images/btn_rsvp.png" /></a>
+				<img id="rightHomePicture" src="{{ STATIC_URL }}images/img_homeRight.png" />
 			{% endblock %}
 		</div> <!-- #content -->
 	</div> <!-- #wrapper -->	
