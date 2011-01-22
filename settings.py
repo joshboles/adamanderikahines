@@ -74,12 +74,12 @@ MIDDLEWARE_CLASSES = [
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django_openid.consumer.SessionConsumer",
-    "django.contrib.flatpages.middleware.FlatpageFallbackMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "pinax.apps.account.middleware.LocaleMiddleware",
     "pinax.middleware.security.HideSensistiveFieldsMiddleware",
     "servee.wysiwyg.middleware.WysiwygMiddleware",
     "servee.toolbar.middleware.ToolbarMiddleware",
+    "django.contrib.flatpages.middleware.FlatpageFallbackMiddleware",
     "debug_toolbar.middleware.DebugToolbarMiddleware",
 ]
 
