@@ -132,6 +132,7 @@ INSTALLED_APPS = [
     "django_openid",
     "easy_thumbnails",
     "emailconfirmation",
+    "frontendadmin",
     "idios",
     "improved_inlines",
     "mailer",
