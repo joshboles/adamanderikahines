@@ -14,16 +14,16 @@ django-admin-tools
 django-ajax-validation
 django-debug-toolbar
 django-email-confirmation
--e git+git@github.com:issackelly/django-frontendadmin.git#egg=django_frontendadmin
+-e git+http://github.com/issackelly/django-frontendadmin.git#egg=django_frontendadmin
 django-improved-inlines
 django-mailer
 django-openid
-django-servee
+-e git+http://github.com/servee/servee.git#egg=django_servee
 django-staticfiles
 django-tagging
 django-timezones
 django-treebeard
--e git+git@github.com:issackelly/django-uni-form.git#egg=django_uni_form
+-e git+http://github.com/issackelly/django-uni-form.git#egg=django_uni_form
 python-openid
 pytz
 easy-thumbnails
