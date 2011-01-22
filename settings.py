@@ -169,6 +169,7 @@ INSTALLED_APPS = [
     
     # project
     "profiles",
+    "rsvp",
 ]
 
 FIXTURE_DIRS = [

@@ -14,6 +14,8 @@ handler500 = "pinax.views.server_error"
 urlpatterns = patterns("",
     url(r"^$", direct_to_template, {"template": "homepage.html"}, name="homepage"),
     # base urls
+    url(r"^rsvp/", "rsvp.views.rsvp", name="rsvp"),
+    
     url(r"^profiles/", include("profiles.urls")),
     url(r"^blog/", include("biblion.urls")),
     url(r"^admin/invite_user/$", "pinax.apps.signup_codes.views.admin_invite_user", name="admin_invite_user"),

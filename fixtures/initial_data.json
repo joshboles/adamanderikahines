@@ -3,8 +3,8 @@
         "pk": 1, 
         "model": "sites.site", 
         "fields": {
-            "domain": "example.com", 
-            "name": "Base Site"
+            "domain": "adamanderikahines.com", 
+            "name": "Adam Hines and Erika Beach: June 3rd 2011"
         }
     }
 ]

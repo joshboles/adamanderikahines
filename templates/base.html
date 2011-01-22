@@ -42,7 +42,17 @@
 			</div> <!-- #nav -->
 		</div> <!-- #header -->
 		<div id="content">
-			{% block body_outer %}
+		    {% if messages %}
+                <ul id="messages">
+                    {% for message in messages %}
+                    <li id="message_{{ forloop.counter }}"{% if message.tags %} class="{{ message.tags }}"{% endif %}>
+                        <a href="#"><small>{% trans "clear" %}</small></a>
+                        {{ message }}
+                    </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+			{% block body %}
 				<img id="leftHomePicture" src="{{ STATIC_URL }}images/img_homeLeft.png" />
 				<a href=""><img id="rsvpButton" src="{{ STATIC_URL }}images/btn_rsvp.png" /></a>
 				<img id="rightHomePicture" src="{{ STATIC_URL }}images/img_homeRight.png" />
