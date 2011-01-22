@@ -6,7 +6,8 @@ from rsvp.models import Rsvp
 class RsvpForm(BetterModelForm):    
     dinner_dancing = forms.TypedChoiceField(coerce=bool,
                        choices=((False, 'No'), (True, 'Yes')),
-                       widget=forms.RadioSelect
+                       widget=forms.RadioSelect,
+                       label="Will you be joining us for Dinner & Dancing on June 3rd?"
                     )
     
     class Meta:
