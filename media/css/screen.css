@@ -89,3 +89,16 @@ body {
 				right: 82px;
 				z-index: 2;
 			}
+			
+/******** RSVP Form Styles *******/
+label {
+	margin-top: 20px;
+	margin-bottom: 5px;
+	font-weight: bold;
+}
+
+input[type=text] {
+	border: 1px solid #4461ac;
+}
+
+/******** End RSVP Form Styles *******/
