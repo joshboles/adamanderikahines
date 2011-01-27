@@ -11,6 +11,11 @@ img {
 	width: 383px;
 }
 
+#content a {
+	text-decoration: none;
+	color: #4461AC;
+}
+
 body {
 	width: 99%;
 	background-color: #FFF;
