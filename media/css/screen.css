@@ -117,6 +117,8 @@ input[type=text] {
 	border: 1px solid #4461ac;
 }
 
-#id_how_many
+#id_how_many, #id_stuffed_turkey_roulade, #id_citrus_grilled_salmon {
+	width: 30px;
+}
 
 /******** End RSVP Form Styles *******/
