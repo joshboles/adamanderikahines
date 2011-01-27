@@ -113,12 +113,24 @@ label[for=id_dinner_dancing], label[for=id_how_many], label[for=id_names] {
 	font-size: 14px;
 }
 
-input[type=text] {
+#hint_id_stuffed_turkey_roulade, #hint_id_citrus_grilled_salmon {
+	margin-right: 400px;
+}
+
+input[type=text], #id_comments {
 	border: 1px solid #4461ac;
 }
 
 #id_how_many, #id_stuffed_turkey_roulade, #id_citrus_grilled_salmon {
 	width: 30px;
+}
+
+input[type=submit] {
+	margin-top: 25px;
+	background-color: #4461ac;
+	width: 95px;
+	height: 25px;
+	color: #FFF;
 }
 
 /******** End RSVP Form Styles *******/
