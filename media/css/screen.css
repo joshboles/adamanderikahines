@@ -104,7 +104,7 @@ legend {
 	margin-bottom: -10px;
 }
 
-label[for=id_dinner_dancing], label[for=id_how_many], label[for=id_names] {
+label[for=id_dinner_dancing], label[for=id_how_many], label[for=id_names], label[for=id_comments] {
 	font-weight: bold;
 }
 
