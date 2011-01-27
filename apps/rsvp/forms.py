@@ -16,9 +16,9 @@ class RsvpForm(BetterModelForm):
             ("", {"fields": 
                 ["dinner_dancing", "how_many", "names"], "legend": ""
             }),
-            ("If attending please choose number of entres", {
+            ("If attending please choose number of entrees", {
                 "fields": ["stuffed_turkey_roulade", "citrus_grilled_salmon"],
-                "description": "All entres will be served with side salad, rolls & two side dishes",
+                "description": "All entrees will be served with side salad, rolls & two side dishes",
                 "classes": ["", ""]
             }),
             ("",{"fields":

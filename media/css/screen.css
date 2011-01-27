@@ -91,10 +91,22 @@ body {
 			}
 			
 /******** RSVP Form Styles *******/
-label {
-	margin-top: 20px;
-	margin-bottom: 5px;
+#div_id_dinner_dancing, #div_id_how_many, #div_id_names {
+	margin-bottom: 20px;
+}
+
+#div_id_stuffed_turkey_roulade, #div_id_citrus_grilled_salmon {
+	margin: 20px;
+}
+
+legend {
 	font-weight: bold;
+	margin-bottom: -10px;
+}
+
+.description, #hint_id_stuffed_turkey_roulade, #hint_id_citrus_grilled_salmon {
+	font-style: italic;
+	font-size: 14px;
 }
 
 input[type=text] {
