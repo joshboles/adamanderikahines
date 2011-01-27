@@ -104,6 +104,10 @@ legend {
 	margin-bottom: -10px;
 }
 
+label[for=id_dinner_dancing], label[for=id_how_many], label[for=id_names] {
+	font-weight: bold;
+}
+
 .description, #hint_id_stuffed_turkey_roulade, #hint_id_citrus_grilled_salmon {
 	font-style: italic;
 	font-size: 14px;
@@ -112,5 +116,7 @@ legend {
 input[type=text] {
 	border: 1px solid #4461ac;
 }
+
+#id_how_many
 
 /******** End RSVP Form Styles *******/
