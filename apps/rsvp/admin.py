@@ -1,4 +1,7 @@
 from django.contrib import admin
 from rsvp.models import Rsvp
 
-admin.site.register(Rsvp)
+class RsvpAdmin:
+    list_display = ["dinner_dancing", "how_many", "names", "stuffed_turkey_roulade", "citrus_grilled_salmon"]
+
+admin.site.register(Rsvp, RsvpAdmin)
