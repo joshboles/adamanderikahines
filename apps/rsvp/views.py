@@ -2,7 +2,7 @@ from django.contrib import messages
 from django.shortcuts import render_to_response, redirect
 from django.template import RequestContext
 
-from rsvp.forms import RsvpForm
+from rsvp.forms import RsvpForm, DinnerChoiceForm
 
 
 def rsvp(request):

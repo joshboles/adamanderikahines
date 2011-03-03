@@ -1,7 +1,7 @@
 from django import forms
 from form_utils.forms import BetterModelForm
 
-from rsvp.models import Rsvp
+from rsvp.models import Rsvp, DinnerChoice
 
 class RsvpForm(BetterModelForm):    
     dinner_dancing = forms.TypedChoiceField(coerce=bool,
@@ -14,14 +14,23 @@ class RsvpForm(BetterModelForm):
         model = Rsvp
         fieldsets = [
             ("", {"fields": 
-                ["dinner_dancing", "how_many", "names"], "legend": ""
+                ["dinner_dancing", "email", "comments"], "legend": ""
             }),
-            ("If attending please choose number of entres", {
-                "fields": ["stuffed_turkey_roulade", "citrus_grilled_salmon"],
-                "description": "All entres will be served with side salad, rolls & two side dishes",
-                "classes": ["", ""]
+        ]
+
+class DinnerChoiceForm(BetterModelForm):
+    DINNER_CHOICES = (
+        ("turkey", "Stuffed Turkey Roulade"),
+        ("salmon", "Citrus Grilled Salmon"),
+    )
+    def __init__(self, *args, **kwargs):
+        super(DinnerChoiceForm, self).__init__(*args, **kwargs)
+        self.dinner_choice["widget"] = forms.RadioSelect(choices=DINNER_CHOICES)
+    
+    class Meta:
+        model = DinnerChoice
+        fieldsets = [
+            ("", {"fields": 
+                ["name", "dinner_choice",], "legend": ""
             }),
-            ("",{"fields":
-                ["comments",]
-            })
         ]
