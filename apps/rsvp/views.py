@@ -18,10 +18,11 @@ def rsvp(request):
     if form.is_valid():
         rsvp = form.save()
         
-        # recreate now that we have an instance
-        formset = DinnerChoiceFormset(request.POST, instance=rsvp)
-        if formset.is_valid():
-            formset.save()
+        if rsvp.dinner_dancing:
+            # recreate now that we have an instance
+            formset = DinnerChoiceFormset(request.POST, instance=rsvp)
+            if formset.is_valid():
+                formset.save()
         
         messages.success(request, "Your RSVP was received.")
         return redirect("homepage")
