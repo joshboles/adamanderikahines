@@ -130,7 +130,7 @@ INSTALLED_APPS = [
     "biblion",
     "debug_toolbar",
     "django_openid",
-    "easy_thumbnails",
+    #"easy_thumbnails",
     "emailconfirmation",
     "frontendadmin",
     "idios",

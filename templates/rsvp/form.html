@@ -7,7 +7,7 @@
 
         {{ formset.management_form }}
         
-        {% for form in formset %}
+        {% for form in formset.forms %}
             {{ form|as_uni_form }}
         {% endfor %}
 

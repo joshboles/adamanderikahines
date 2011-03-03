@@ -9,7 +9,7 @@ from rsvp.forms import RsvpForm
 def rsvp(request):
     
     # Handles the DinnerChoice
-    DinnerChoiceFormset = inlineformset_factory(Rsvp, DinnerChoice)
+    DinnerChoiceFormset = inlineformset_factory(Rsvp, DinnerChoice, extra=4, can_delete=False)
     formset = DinnerChoiceFormset()
 
     # Handles the RSVP

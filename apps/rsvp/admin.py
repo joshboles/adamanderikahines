@@ -1,10 +1,10 @@
 from django.contrib import admin
 from rsvp.models import *
 
-class DinnerAdmin(models.TabularInline):
+class DinnerAdmin(admin.TabularInline):
     model = DinnerChoice
 
-class RsvpAdmin(models.ModelAdmin):
+class RsvpAdmin(admin.ModelAdmin):
     list_display = ["email", "comments"]
     inlines = [DinnerAdmin,]
 
