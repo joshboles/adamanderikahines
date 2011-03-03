@@ -1,17 +1,32 @@
 from django.contrib import messages
 from django.shortcuts import render_to_response, redirect
 from django.template import RequestContext
-
-from rsvp.forms import RsvpForm, DinnerChoiceForm
+from django.forms.models import inlineformset_factory
+from rsvp.models import Rsvp, DinnerChoice
+from rsvp.forms import RsvpForm
 
 
 def rsvp(request):
+    
+    # Handles the DinnerChoice
+    DinnerChoiceFormset = inlineformset_factory(Rsvp, DinnerChoice)
+    formset = DinnerChoiceFormset()
+
+    # Handles the RSVP
     form = RsvpForm(request.POST or None)
+    
     if form.is_valid():
-        form.save()
+        rsvp = form.save()
+        
+        # recreate now that we have an instance
+        formset = DinnerChoiceFormset(request.POST, instance=rsvp)
+        if formset.is_valid():
+            formset.save()
+        
         messages.success(request, "Your RSVP was received.")
         return redirect("homepage")
     
     return render_to_response("rsvp/form.html", {
         "form": form,
+        "formset": formset,
     }, context_instance=RequestContext(request))
