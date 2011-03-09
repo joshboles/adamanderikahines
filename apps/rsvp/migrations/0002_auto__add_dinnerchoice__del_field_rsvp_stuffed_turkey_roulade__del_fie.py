@@ -32,7 +32,7 @@ class Migration(SchemaMigration):
         db.delete_column('rsvp_rsvp', 'how_many')
 
         # Adding field 'Rsvp.email'
-        db.add_column('rsvp_rsvp', 'email', self.gf('django.db.models.fields.EmailField')(default=' ', unique=True, max_length=75), keep_default=False)
+        db.add_column('rsvp_rsvp', 'email', self.gf('django.db.models.fields.EmailField')(default=' ', max_length=75), keep_default=False)
 
 
     def backwards(self, orm):
@@ -71,7 +71,7 @@ class Migration(SchemaMigration):
             'comments': ('django.db.models.fields.TextField', [], {'null': 'True', 'blank': 'True'}),
             'created': ('model_utils.fields.AutoCreatedField', [], {'default': 'datetime.datetime.now'}),
             'dinner_dancing': ('django.db.models.fields.BooleanField', [], {'default': 'False'}),
-            'email': ('django.db.models.fields.EmailField', [], {'unique': 'True', 'max_length': '75'}),
+            'email': ('django.db.models.fields.EmailField', [], {'max_length': '75'}),
             'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
             'modified': ('model_utils.fields.AutoLastModifiedField', [], {'default': 'datetime.datetime.now'})
         }

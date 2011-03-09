@@ -3,7 +3,7 @@ from model_utils.models import TimeStampedModel
 
 class Rsvp(TimeStampedModel):
     dinner_dancing = models.BooleanField("Will you be joining us for Dinner & Dancing on June 3rd?")
-    email = models.EmailField(unique=True)
+    email = models.EmailField()
     comments = models.TextField(blank=True, null=True)
 
 class DinnerChoice(TimeStampedModel):
