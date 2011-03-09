@@ -91,38 +91,101 @@ body {
 			}
 			
 /******** RSVP Form Styles *******/
-#div_id_dinner_dancing, #div_id_how_many, #div_id_names {
-	margin-bottom: 20px;
+
+.hidden {
+    display: none;
 }
 
-#div_id_stuffed_turkey_roulade, #div_id_citrus_grilled_salmon {
-	margin: 20px;
+#div_id_dinner_dancing ul {
+    width: 100px;
+    margin-bottom: 20px;
 }
 
-legend {
-	font-weight: bold;
-	margin-bottom: -10px;
+#div_id_dinner_dancing ul li {
+    display: inline;
+    float: right;
+    width: 50px;
 }
 
-label[for=id_dinner_dancing], label[for=id_how_many], label[for=id_names], label[for=id_comments] {
-	font-weight: bold;
+#div_id_email label {
+    width: 40px !important;
+    float: left;
 }
 
-.description, #hint_id_stuffed_turkey_roulade, #hint_id_citrus_grilled_salmon {
-	font-style: italic;
-	font-size: 14px;
+input#id_email {
+    margin-left: 70px;
+    width: 358px;
+    float: left;
 }
 
-#hint_id_stuffed_turkey_roulade, #hint_id_citrus_grilled_salmon {
-	margin-right: 400px;
+    /** Labels for name text fields **/
+#div_id_dinnerchoice_set-0-name label, #div_id_dinnerchoice_set-1-name label,
+#div_id_dinnerchoice_set-2-name label, #div_id_dinnerchoice_set-3-name label {
+    float: left;
+    width: 40px !important;
+}
+
+    /** Name text fields **/
+input#id_dinnerchoice_set-0-name, input#id_dinnerchoice_set-1-name,
+input#id_dinnerchoice_set-2-name, input#id_dinnerchoice_set-3-name {
+    width: 358px;
+    float: left;
+    margin-left: 70px;
+}
+
+    /** Labels for dinner choice fields **/
+#div_id_dinnerchoice_set-0-dinner_choice label, #div_id_dinnerchoice_set-1-dinner_choice label,
+#div_id_dinnerchoice_set-2-dinner_choice label, #div_id_dinnerchoice_set-3-dinner_choice label {
+    float: left;
+    width: 100px !important;
+}
+    /** Dinner choice fields **/
+select#id_dinnerchoice_set-0-dinner_choice, select#id_dinnerchoice_set-1-dinner_choice,
+select#id_dinnerchoice_set-2-dinner_choice, select#id_dinnerchoice_set-3-dinner_choice {
+    width: 200px;
+    float: left;
+    margin-left: 10px;
+}
+
+#div_id_dinnerchoice_set-0-name, #div_id_dinnerchoice_set-1-name,
+#div_id_dinnerchoice_set-2-name, #div_id_dinnerchoice_set-3-name {
+    width: 470px;
+    padding-top: 10px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+#div_id_dinnerchoice_set-0-dinner_choice, #div_id_dinnerchoice_set-1-dinner_choice,
+#div_id_dinnerchoice_set-2-dinner_choice, #div_id_dinnerchoice_set-3-dinner_choice {
+    width: 470px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+div#div_id_comments {
+    display: none;
+}
+
+.uniForm .textInput, .uniForm .fileUpload, .uniForm .selectInput, .uniForm select, .uniForm textarea {
+    width: 100%;
 }
 
 input[type=text], #id_comments {
 	border: 1px solid #4461ac;
 }
 
-#id_how_many, #id_stuffed_turkey_roulade, #id_citrus_grilled_salmon {
-	width: 30px;
+.form_block {
+    height: 20px;
+    width: 470px;
+}
+
+#addGuest {
+    float: left;
+}
+
+#removeGuest {
+    float: right;
 }
 
 input[type=submit] {
@@ -131,6 +194,7 @@ input[type=submit] {
 	width: 95px;
 	height: 25px;
 	color: #FFF;
+	float: left;
 }
 
 /******** End RSVP Form Styles *******/

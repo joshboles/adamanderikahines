@@ -11,7 +11,11 @@
             {{ form|as_uni_form }}
         {% endfor %}
 
-        <div class = "form_block">
+        <div class="form_block">
+            <input type="button" id="addGuest" value="Add Guest">
+            <input type="button" id="removeGuest" value="Remove Guest">
+        </div>
+        <div class="form_block">
             <input type="submit" value="Send">
         </div>
     </fieldset>

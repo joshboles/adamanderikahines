@@ -8,9 +8,10 @@ class Rsvp(TimeStampedModel):
 
 class DinnerChoice(TimeStampedModel):
     DINNER_CHOICES = (
+        (None, "-----"),
         ("turkey", "Stuffed Turkey Roulade"),
         ("salmon", "Citrus Grilled Salmon"),
     )
     rsvp = models.ForeignKey(Rsvp)
     name = models.CharField(max_length=64)
-    dinner_choice = models.CharField(max_length=16, choices=DINNER_CHOICES, default="turkey")
+    dinner_choice = models.CharField(max_length=16, choices=DINNER_CHOICES, default=None, null=True)
