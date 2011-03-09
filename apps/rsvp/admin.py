@@ -10,4 +10,4 @@ class RsvpAdmin(admin.ModelAdmin):
     inlines = [DinnerInline,]
 
 admin.site.register(Rsvp, RsvpAdmin)
-admin.site.register(DinnerChoice)
+admin.site.register(DinnerChoice, DinnerInline)
