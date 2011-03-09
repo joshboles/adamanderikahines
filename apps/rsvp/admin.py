@@ -5,7 +5,7 @@ class DinnerInline(admin.TabularInline):
     model = DinnerChoice
 
 class RsvpAdmin(admin.ModelAdmin):
-    list_display = ["dinner_dancing", "dinner_choice", "email"]
+    list_display = ["dinner_dancing", "email"]
     inlines = [DinnerInline,]
 
 admin.site.register(Rsvp, RsvpAdmin)
