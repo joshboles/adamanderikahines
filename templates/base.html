@@ -21,6 +21,7 @@
         
         <script src="{% block jquery_src %}{{ STATIC_URL }}js/jquery-1.4.2.min.js{% endblock %}" type="text/javascript"></script>
         <script src="{{ STATIC_URL }}js/jquery-ui-1.8.6.full.min.js" type="text/javascript"></script>
+ 		<script src="{{ STATIC_URL }}js/scripts.js" type="text/javascript"></script>
 
 		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
         {% block extra_head_base %}
@@ -32,7 +33,7 @@
 <body class="{% block body_class %}{% endblock %}">
 	<div id="wrapper">
 		<div id="header">
-			<div id="logo"></div> <!-- #logo -->
+			<a href="/"><div id="logo"></div></a>
 			<div id="nav">
 				<ul>
 					<li><a href="/rsvp/"><img src="{{ STATIC_URL }}images/nav_rsvp.png" alt="rsvp" /></a></li>
@@ -55,7 +56,7 @@
             {% endif %}
 			{% block body %}
 				<img id="leftHomePicture" src="{{ STATIC_URL }}images/img_homeLeft.png" />
-				<a href=""><img id="rsvpButton" src="{{ STATIC_URL }}images/btn_rsvp.png" /></a>
+				<a href="/rsvp/"><img id="rsvpButton" src="{{ STATIC_URL }}images/btn_rsvp.png" /></a>
 				<img id="rightHomePicture" src="{{ STATIC_URL }}images/img_homeRight.png" />
 			{% endblock %}
 		</div> <!-- #content -->
