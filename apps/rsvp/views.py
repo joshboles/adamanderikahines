@@ -23,6 +23,8 @@ def rsvp(request):
             formset = DinnerChoiceFormset(request.POST, instance=rsvp)
             if formset.is_valid():
                 formset.save()
+            else:
+                print formset.errors
         
         messages.success(request, "Your RSVP was received.")
         return redirect("homepage")
