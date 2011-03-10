@@ -4,8 +4,8 @@ from form_utils.forms import BetterModelForm
 from rsvp.models import Rsvp, DinnerChoice
 
 class RsvpForm(BetterModelForm):    
-    dinner_dancing = forms.TypedChoiceField(coerce=bool,
-                       choices=((False, 'No'), (True, 'Yes')),
+    dinner_dancing = forms.TypedChoiceField(coerce=int,
+                       choices=((0, 'No'), (1, 'Yes')),
                        widget=forms.RadioSelect,
                        label="Will you be joining us for Dinner & Dancing on June 3rd?"
                     )
