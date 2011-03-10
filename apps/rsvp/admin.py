@@ -9,7 +9,7 @@ class DinnerAdmin(admin.ModelAdmin):
 
 class RsvpAdmin(admin.ModelAdmin):
     list_display = ["email", "dinner_dancing"]
-    list_filter = ["diner_dancing",]
+    list_filter = ["dinner_dancing",]
     inlines = [DinnerInline,]
 
 admin.site.register(Rsvp, RsvpAdmin)
