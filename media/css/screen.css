@@ -13,7 +13,7 @@ img {
 
 #content a {
 	text-decoration: none;
-	color: #4461AC;
+	color: #CECECE;
 }
 
 body {
@@ -114,7 +114,7 @@ body {
 
 input#id_email {
     margin-left: 70px;
-    width: 358px;
+    width: 350px;
     float: left;
 }
 
@@ -128,7 +128,7 @@ input#id_email {
     /** Name text fields **/
 input#id_dinnerchoice_set-0-name, input#id_dinnerchoice_set-1-name,
 input#id_dinnerchoice_set-2-name, input#id_dinnerchoice_set-3-name {
-    width: 358px;
+    width: 350px;
     float: left;
     margin-left: 70px;
 }
