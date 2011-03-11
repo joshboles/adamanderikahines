@@ -7,7 +7,7 @@ $(document).ready(function(){
     if(location.pathname == "/rsvp/"){
         // Counter used for adding guests
         var additionalGuests = 0;
-        $("[name=innerchoice_set-TOTAL_FORMS]").val(1);
+        $("[name=dinnerchoice_set-TOTAL_FORMS]").val(1);
         
         /**************************************************
          * Hide elements on page that aren't initially used
@@ -64,7 +64,7 @@ $(document).ready(function(){
                     $("#div_id_dinnerchoice_set-" + additionalGuests + "-name").removeClass("hidden");
                     $("#div_id_dinnerchoice_set-" + additionalGuests + "-dinner_choice").removeClass("hidden");
                     $("#removeGuest").removeClass("hidden");
-                    $("[name=innerchoice_set-TOTAL_FORMS]").val(additionalGuests+1);
+                    $("[name=dinnerchoice_set-TOTAL_FORMS]").val(additionalGuests+1);
                 }
                 
                 if(additionalGuests == 3) {
@@ -77,7 +77,7 @@ $(document).ready(function(){
                 $("#div_id_dinnerchoice_set-" + additionalGuests + "-name").addClass("hidden");
                 $("#div_id_dinnerchoice_set-" + additionalGuests + "-dinner_choice").addClass("hidden");
                 additionalGuests--;
-                $("[name=innerchoice_set-TOTAL_FORMS]").val(additionalGuests+1);
+                $("[name=dinnerchoice_set-TOTAL_FORMS]").val(additionalGuests+1);
                 $("#addGuest").removeClass("hidden");
                 if(additionalGuests == 0){
                     $("#removeGuest").addClass("hidden");

@@ -3,11 +3,14 @@ from rsvp.models import *
 
 class DinnerInline(admin.TabularInline):
     model = DinnerChoice
-    list_display = ["name", "dinner_choice"]
+
+class DinnerAdmin(admin.ModelAdmin):
+    list_display = ["name", "email", "dinner_choice"]
 
 class RsvpAdmin(admin.ModelAdmin):
-    list_display = ["dinner_dancing", "email"]
+    list_display = ["email", "dinner_dancing"]
+    list_filter = ["dinner_dancing",]
     inlines = [DinnerInline,]
 
 admin.site.register(Rsvp, RsvpAdmin)
-admin.site.register(DinnerChoice)
+admin.site.register(DinnerChoice, DinnerAdmin)

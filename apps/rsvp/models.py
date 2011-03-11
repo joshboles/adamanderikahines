@@ -15,3 +15,7 @@ class DinnerChoice(TimeStampedModel):
     rsvp = models.ForeignKey(Rsvp)
     name = models.CharField(max_length=64)
     dinner_choice = models.CharField(max_length=16, choices=DINNER_CHOICES, default=None, null=True)
+    
+    @property
+    def email(self):
+        return self.rsvp.email
