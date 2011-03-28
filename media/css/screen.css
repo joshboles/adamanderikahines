@@ -197,8 +197,11 @@ input[type=submit] {
 	float: left;
 }
 
+#dinner_descriptions {
+    margin-top: 5px;
+}
 #dinner_descriptions p {
-    font-size: 12;
+    font-size: 13px;
 }
 
 /******** End RSVP Form Styles *******/
