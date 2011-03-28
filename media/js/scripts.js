@@ -18,7 +18,8 @@ $(document).ready(function(){
              
             $("#addGuest").addClass("hidden");
             $("#removeGuest").addClass("hidden");
-
+            $("#dinner_descriptions").addClass("hidden");
+            
             // Initial recipient of inivtation
             $("#div_id_dinnerchoice_set-0-dinner_choice").addClass("hidden");
 
@@ -44,6 +45,7 @@ $(document).ready(function(){
             $("#id_dinner_dancing_1").parents("li").click(function(){
                 $("#addGuest").removeClass("hidden");
                 $("#div_id_dinnerchoice_set-0-dinner_choice").removeClass("hidden");
+                $("#dinner_descriptions").removeClass("hidden");
             });
         
             // When "no" is clicked, hide Add Guest button
@@ -52,6 +54,7 @@ $(document).ready(function(){
                 $("#addGuest").addClass("hidden");
                 $("#removeGuest").addClass("hidden");
                 $("#div_id_dinnerchoice_set-0-dinner_choice").addClass("hidden");
+                $("#dinner_descriptions").addClass("hidden");
             });
         
         /**************************************************
